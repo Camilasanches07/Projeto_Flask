@@ -1,2 +1,4 @@
-Alunos
-{{result}}
+
+{%for item in result%}
+    <p>{{item["Identificação do Aluno"]}} - {{item["Nome"]}} - Sala: {{item["Identificação da Sala"]}}</p>
+{%endfor%}
