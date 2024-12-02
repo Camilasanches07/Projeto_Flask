@@ -1,4 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
 
-{%for item in result%}
-    <p>{{item["Identificação do Aluno"]}} - {{item["Nome"]}} - Sala: {{item["Identificação da Sala"]}}</p>
-{%endfor%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="{{ url_for('professores')}}">Clique Aqui</a>
+    <table>
+        <thead>
+            <tr>
+                <th>Registro Do Aluno</th>
+                <th>Aluno</th>
+                <th>Registro Da Sala</th>
+            </tr>
+        </thead>
+        <tbody>
+            {%for item in result%}
+            <tr>
+                <td>
+                    {{item["Identificação do Aluno"]}}
+                </td>
+                <td>
+                    {{item["Nome"]}}
+                </td>
+                <td>
+                    {{item["Identificação da Sala"]}}
+                </td>
+            </tr>
+            {%endfor%}
+        </tbody>
+    </table>
+
+</body>
+
+</html>
